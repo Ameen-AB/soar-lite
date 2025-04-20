@@ -1,3 +1,7 @@
 database:
   type: sqlite
   uri: sqlite:///~/.soar_lite/soar.db
+
+connectors:
+  slack:
+    token: YOUR_TOKEN_HERE

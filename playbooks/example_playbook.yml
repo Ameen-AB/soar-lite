@@ -1,0 +1,32 @@
+# Example SOAR-Lite Playbook
+# This defines a simple linear set of tasks to run
+
+name: Example Playbook
+description: |
+  This playbook demonstrates basic SOAR-Lite task orchestration.
+  Each task is executed in order.
+
+tasks:
+  - id: task1
+    name: Fetch Open Incidents
+    connector: servicenow
+    action: get_open_incidents
+    params:
+      priority: high
+      limit: 10
+
+  - id: task2
+    name: Enrich Incident Details
+    connector: virustotal
+    action: enrich_ip
+    params:
+      ip_field: src_ip
+
+  - id: task3
+    name: Create Ticket
+    connector: jira
+    action: create_ticket
+    params:
+      project: SEC
+      summary: "New security incident detected"
+      description_field: full_details

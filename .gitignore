@@ -1,0 +1,33 @@
+# Virtual environment
+.venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+*.log
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+
+# Testing cache
+.pytest_cache/
+
+# Sphinx build artifacts
+docs/_build/
+
+# SQLite database files
+*.sqlite3
+*.db
+
+# MacOS junk (optional)
+.DS_Store
+
+# Editor/IDE folders
+.vscode/
+.idea/
+*.swp
